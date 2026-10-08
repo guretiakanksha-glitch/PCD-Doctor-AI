@@ -1,0 +1,613 @@
+Build a modern, professional, responsive web application titled:
+
+**AI-Based PCB Fault Detection Assistant**
+
+### 1. Project Purpose
+
+Create an AI-powered web application for ECE students, beginner electronics engineers, and electronics technicians to identify and troubleshoot possible PCB faults.
+
+PCB design and troubleshooting can be difficult because faults such as wrong component placement, missing components, incorrect connections, reversed polarity, possible short circuits, and damaged components can be difficult to identify manually.
+
+The application should allow users to upload a **PCB image, PCB layout image, or circuit diagram**. The system should analyze the uploaded image and provide:
+
+* Possible fault location
+* Possible fault type
+* Fault severity
+* Explanation of the suspected problem
+* Recommended troubleshooting steps
+* Components involved
+* Confidence score
+* Final analysis report
+
+Important: The application must clearly state that AI results are **suspected/possible faults and should be verified using a multimeter, schematic, datasheet, or physical inspection**. Do not present AI predictions as guaranteed electrical faults.
+
+---
+
+## 2. Target Users
+
+Design the application primarily for:
+
+* ECE students
+* Electronics beginners
+* Engineering students
+* PCB designers
+* Electronics technicians
+* Hobbyists
+
+---
+
+## 3. Design Style
+
+Create a clean, modern engineering/technology interface.
+
+### Color theme:
+
+* White background
+* Light blue primary sections
+* Dark navy text
+* Blue buttons
+* Light gray cards
+* Red/orange only for warnings and fault severity
+
+The interface should feel like a professional **electronics engineering diagnostic platform**, not a generic AI chatbot.
+
+Use:
+
+* Rounded cards
+* Subtle shadows
+* Clean icons
+* Clear typography
+* Responsive design
+* Desktop-first dashboard with mobile responsiveness
+
+---
+
+# 4. Main Navigation
+
+Create a sidebar/top navigation containing:
+
+1. Dashboard
+2. PCB Analysis
+3. Analysis History
+4. Fault Library
+5. Reports
+6. Learn PCB
+7. Settings
+
+Add a prominent **"Analyze New PCB"** button.
+
+---
+
+# 5. Landing / Home Page
+
+Create an attractive landing page with:
+
+### Hero section
+
+Title:
+
+**AI-Based PCB Fault Detection Assistant**
+
+Subtitle:
+
+**Upload your PCB image, identify possible faults, understand the problem, and get guided troubleshooting steps.**
+
+Primary button:
+
+**Analyze PCB**
+
+Secondary button:
+
+**Learn How It Works**
+
+Add a professional PCB/electronics illustration.
+
+### Feature cards
+
+Show:
+
+* 🔍 AI PCB Inspection
+* ⚠️ Fault Identification
+* 📍 Fault Location
+* 🧠 AI Explanation
+* 🔧 Troubleshooting Guidance
+* 📊 Analysis Reports
+
+### How It Works
+
+Display four steps:
+
+**Upload → Analyze → Detect → Troubleshoot**
+
+---
+
+# 6. User Dashboard
+
+Create a dashboard showing:
+
+### Top statistics
+
+* Total PCB Analyses
+* Possible Faults Detected
+* Critical Issues
+* Successful/Normal Analyses
+
+### Recent analyses
+
+Show cards/table containing:
+
+* PCB name
+* Date
+* Number of possible faults
+* Highest severity
+* Analysis status
+* View Report button
+
+### Quick Actions
+
+* Upload New PCB
+* View History
+* View Fault Library
+* Generate Report
+
+---
+
+# 7. PCB Upload & Analysis Page
+
+This is the most important page.
+
+Create a large drag-and-drop upload area.
+
+Text:
+
+**Upload PCB Image or Circuit Layout**
+
+Supported formats:
+
+* JPG
+* JPEG
+* PNG
+* PDF if supported
+
+Allow the user to:
+
+* Drag and drop
+* Browse files
+* Preview the uploaded image
+* Remove/change image
+
+Add optional fields:
+
+**PCB Name**
+
+**Project/Board Type**
+
+Examples:
+
+* Arduino board
+* Power supply
+* Sensor board
+* IoT board
+* Communication circuit
+* Custom PCB
+
+**Additional Description**
+
+Allow the user to describe symptoms, for example:
+
+> "Board is not powering ON."
+
+or
+
+> "Voltage regulator becomes very hot."
+
+Then add a large button:
+
+**Analyze PCB with AI**
+
+---
+
+# 8. AI Analysis Experience
+
+After clicking Analyze PCB, show a professional loading interface.
+
+Example stages:
+
+**Uploading PCB...**
+
+**Analyzing components...**
+
+**Inspecting connections...**
+
+**Checking component orientation...**
+
+**Looking for possible faults...**
+
+**Preparing troubleshooting recommendations...**
+
+Do not make the loading experience unnecessarily long.
+
+---
+
+# 9. Analysis Results Page
+
+Display the uploaded PCB image on the left and analysis results on the right.
+
+### Overall status
+
+Show one of:
+
+🟢 **No obvious visual issues detected**
+
+🟡 **Possible issues detected**
+
+🔴 **Multiple critical issues suspected**
+
+Use a clear warning that visual AI inspection cannot confirm electrical faults without physical measurements.
+
+---
+
+# 10. Fault Detection Results
+
+For each suspected fault, display a card containing:
+
+### Fault #1
+
+**Fault Type:** Possible reversed polarity
+
+**Component:** C3
+
+**Location:** Upper-right section of PCB
+
+**Severity:** High
+
+**Confidence:** 87%
+
+**Explanation:**
+
+Explain in simple language why the component orientation may be incorrect.
+
+**Recommended Action:**
+
+1. Power off the PCB.
+2. Check the component polarity against the schematic.
+3. Compare the PCB footprint with the datasheet.
+4. Verify using a multimeter before powering the board.
+
+Add:
+
+**View on PCB**
+
+button.
+
+If technically possible, highlight the suspected region on the uploaded PCB image using a visual marker/bounding box.
+
+---
+
+# 11. Fault Categories
+
+The system should be designed to identify or flag possible:
+
+### Component-related faults
+
+* Missing component
+* Wrong component placement
+* Incorrect component orientation
+* Reversed polarity
+* Damaged/burnt-looking component
+
+### Connection-related faults
+
+* Possible incorrect connection
+* Broken/unclear trace
+* Possible short circuit
+* Unconnected pad
+* Suspicious routing
+
+### Design-related issues
+
+* Insufficient spacing
+* Possible trace-width concern
+* Crowded component placement
+* Potential thermal concern
+
+Important: Clearly distinguish between **visual observations** and **electrical faults that require physical testing**.
+
+---
+
+# 12. Fault Severity
+
+Use three levels:
+
+### 🔴 Critical
+
+Potentially dangerous or could damage components.
+
+### 🟠 Warning
+
+Possible design or component issue that should be checked.
+
+### 🟡 Advisory
+
+Minor issue or recommendation for improvement.
+
+Also allow:
+
+### 🟢 No obvious issue
+
+---
+
+# 13. AI Troubleshooting Assistant
+
+Add an AI assistant panel on the analysis page.
+
+Users should be able to ask questions such as:
+
+* "Why is this component suspicious?"
+* "How can I test this component?"
+* "How do I check this PCB using a multimeter?"
+* "What should I check before powering the PCB?"
+* "What is the function of this component?"
+* "Could this cause overheating?"
+
+The assistant should answer at an ECE beginner-friendly level.
+
+Avoid claiming certainty when the image alone cannot prove a fault.
+
+---
+
+# 14. Troubleshooting Checklist
+
+For every suspected issue, generate a checklist.
+
+Example:
+
+### Before Powering ON
+
+☐ Check polarity
+☐ Check for visible damage
+☐ Check solder bridges
+☐ Verify component values
+☐ Check PCB traces
+☐ Check power and ground continuity
+☐ Verify voltage ratings
+
+Allow users to mark checklist items as completed.
+
+---
+
+# 15. Analysis History
+
+Create a page showing previous analyses.
+
+Columns:
+
+* PCB Name
+* Date
+* Faults Found
+* Highest Severity
+* Status
+* View
+* Download Report
+
+Add search and filters:
+
+* All
+* Critical
+* Warning
+* Advisory
+* No obvious issues
+
+---
+
+# 16. Fault Library
+
+Create an educational fault library.
+
+Include:
+
+* Short Circuit
+* Open Circuit
+* Reversed Polarity
+* Wrong Resistor Value
+* Missing Component
+* Wrong Component Placement
+* Solder Bridge
+* Broken Trace
+* Overheating
+* Incorrect IC Orientation
+
+For every fault provide:
+
+* Definition
+* Common causes
+* Symptoms
+* How to inspect
+* How to test
+* Prevention tips
+
+---
+
+# 17. Learn PCB Section
+
+Create a beginner-friendly learning section covering:
+
+### PCB Basics
+
+* What is a PCB?
+* PCB layers
+* Copper layer
+* Solder mask
+* Silkscreen
+* Through-hole vs SMD
+
+### PCB Design
+
+* Schematic
+* Footprints
+* Component placement
+* Routing
+* Design Rule Check
+
+### PCB Testing
+
+* Continuity testing
+* Voltage testing
+* Resistance testing
+* Multimeter basics
+
+Use simple explanations and diagrams/cards.
+
+---
+
+# 18. Report Generation
+
+After analysis, provide:
+
+**Generate PDF Report**
+
+The report should contain:
+
+* Project/PCB name
+* Uploaded PCB image
+* Analysis date
+* Overall status
+* Suspected faults
+* Fault locations
+* Severity
+* Confidence scores
+* Explanations
+* Recommended troubleshooting steps
+* Verification checklist
+* Safety disclaimer
+
+Also provide:
+
+**Download Report**
+
+and
+
+**Print Report**
+
+---
+
+# 19. Database
+
+Create database tables/entities for:
+
+### Users
+
+* name
+* email
+* role
+
+### PCB Analyses
+
+* analysis ID
+* user ID
+* PCB name
+* upload image
+* upload date
+* board type
+* description
+* overall status
+
+### Detected Issues
+
+* issue ID
+* analysis ID
+* fault type
+* component
+* location
+* severity
+* confidence
+* explanation
+* recommendation
+
+### Troubleshooting Checklist
+
+* checklist ID
+* analysis ID
+* item
+* completed status
+
+---
+
+# 20. Smart Features
+
+Add these useful features:
+
+### A. Compare Analyses
+
+Allow users to compare two PCB analyses.
+
+### B. Before/After
+
+Allow users to upload a PCB before repair and after repair.
+
+### C. Fault Statistics
+
+Show charts such as:
+
+* Most common fault types
+* Fault severity distribution
+* Analysis history
+* Frequently affected components
+
+### D. Export
+
+Allow reports to be downloaded.
+
+---
+
+# 21. Demo Mode
+
+Create a **Demo PCB** option so the application can be demonstrated even without uploading a real PCB.
+
+Include sample PCB cases:
+
+1. Reversed capacitor polarity
+2. Missing component
+3. Possible solder bridge
+4. Wrong component placement
+5. No obvious visual issue
+
+When the user selects a demo case, display a realistic analysis result.
+
+---
+
+# 22. Important Technical Requirement
+
+Build the application so the AI analysis functionality is modular.
+
+Create a clear structure where the image-analysis/AI service can later be connected to a real computer-vision model or external AI API.
+
+For the initial prototype, if real PCB image analysis is not available, use a clearly labeled **prototype/demo analysis mode** rather than pretending that the system has actually detected electrical faults.
+
+---
+
+# 23. Safety and Accuracy
+
+Display this disclaimer near analysis results:
+
+**"AI-generated results are preliminary visual observations and should not be treated as a confirmed electrical diagnosis. Always switch off power before inspecting a PCB and verify suspected faults using appropriate instruments, schematics, datasheets, and qualified supervision."**
+
+Never instruct users to work on a powered PCB when unsafe.
+
+---
+
+# 24. Final Goal
+
+The finished application should look like a real product called:
+
+**PCB Doctor AI**
+
+Tagline:
+
+**"See the problem. Understand the fault. Fix it smarter."**
+
+The final experience should demonstrate a complete workflow:
+
+**User → Upload PCB → AI Visual Inspection → Possible Faults → Fault Location → Explanation → Troubleshooting → Verification Checklist → Report**
+
+Make the application polished, professional, easy for an ECE student to demonstrate, and suitable for a college innovation project or hackathon.
